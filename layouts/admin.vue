@@ -64,12 +64,17 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
-          to: '/'
+          to: '/admin'
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-pencil',
           title: 'Posts',
-          to: '/inspire'
+          to: '/admin/posts'
+        },
+        {
+          icon: 'mdi-home',
+          title: 'Go Home',
+          to: '/'
         }
       ],
       miniVariant: false,
