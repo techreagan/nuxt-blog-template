@@ -26,11 +26,20 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    'quill/dist/quill.core.css',
+    // for snow theme
+    'quill/dist/quill.snow.css',
+    // for bubble theme
+    'quill/dist/quill.bubble.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '@/plugins/vee-validate.js', mode: 'Client' },
+    { src: '@/plugins/vue-quil-editor.js', ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -82,6 +91,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['vee-validate/dist/rules'],
     extend(config, ctx) {}
   }
 }
