@@ -20,7 +20,7 @@
       </v-container>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="fill-height">
         <v-row class="justify-center">
           <v-col md="8">
             <nuxt />
