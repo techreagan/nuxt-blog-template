@@ -5,7 +5,9 @@
         <v-row class="justify-center">
           <v-col md="8" class="flex flex-row">
             <v-row class="justify-space-between align-center">
-              <v-btn x-large text to="/" href>Tech Reagan</v-btn>
+              <v-btn x-large text to="/" href active-class="transparent"
+                >Tech Reagan</v-btn
+              >
               <v-spacer></v-spacer>
               <div>
                 <v-switch
@@ -58,3 +60,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.transparent.v-btn:before {
+  background-color: transparent;
+}
+</style>
