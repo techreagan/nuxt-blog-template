@@ -1,6 +1,6 @@
 # Nuxt Blog Template
 
-> Blog template built with vuetify and nuxtjs with dark and light mode
+> Blog template built with vuetify and nuxtjs, dark and light mode available
 
 ## Screenshots
 
