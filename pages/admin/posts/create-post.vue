@@ -2,6 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="12" sm="12" md="8" lg="8" xl="8">
+        <v-btn class="mb-5" fab small to="/admin/posts" color="primary"
+          ><v-icon>mdi-chevron-left</v-icon></v-btn
+        >
         <h1>Create Post</h1>
         <ValidationObserver v-slot="{ handleSubmit, reset }">
           <form
@@ -86,6 +89,7 @@ export default {
       }
     }
   },
+
   mounted() {
     // eslint-disable-next-line
     console.log('App inited, the Quill instance object is:', this.$refs.editor)
@@ -111,6 +115,11 @@ export default {
     onEditorReady(editor) {
       // eslint-disable-next-line
       console.log('editor ready!', editor)
+    }
+  },
+  head() {
+    return {
+      title: 'Create Post'
     }
   }
 }

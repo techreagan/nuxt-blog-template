@@ -5,7 +5,7 @@
         <v-row class="justify-center">
           <v-col md="8" class="flex flex-row">
             <v-row class="justify-space-between align-center">
-              <v-btn x-large text>Tech Reagan</v-btn>
+              <v-btn x-large text to="/" href>Tech Reagan</v-btn>
               <v-spacer></v-spacer>
               <div>
                 <v-switch
@@ -21,7 +21,7 @@
     </v-app-bar>
     <v-main>
       <v-container class="fill-height">
-        <v-row class="justify-center">
+        <v-row class="justify-center align-self-start">
           <v-col md="8">
             <nuxt />
           </v-col>
@@ -38,9 +38,23 @@
 </template>
 
 <script>
+import 'highlight.js/styles/tomorrow.css'
 export default {
   data() {
     return {}
+  },
+  head() {
+    return {
+      titleTemplate: "%s - Tech Reagan's Blog",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'A worldclass software and network engineer, with alot of experience under my belt Welcome to my blog, this blog will be about software and network engineering.'
+        }
+      ]
+    }
   }
 }
 </script>

@@ -64,7 +64,7 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
-          to: '/admin'
+          to: '/admin/dashboard'
         },
         {
           icon: 'mdi-pencil',
@@ -75,12 +75,30 @@ export default {
           icon: 'mdi-home',
           title: 'Go Home',
           to: '/'
+        },
+        {
+          icon: 'mdi-power',
+          title: 'Logout',
+          to: '/admin'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Tech Reagan Blog'
+    }
+  },
+  head() {
+    return {
+      titleTemplate: '%s - Blog Admin',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'A worldclass software and network engineer, with alot of experience under my belt Welcome to my blog, this blog will be about software and network engineering.'
+        }
+      ]
     }
   }
 }

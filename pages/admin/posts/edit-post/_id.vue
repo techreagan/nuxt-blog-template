@@ -2,6 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="12" sm="12" md="8" lg="8" xl="8">
+        <v-btn class="mb-5" fab small to="/admin/posts" color="primary"
+          ><v-icon>mdi-chevron-left</v-icon></v-btn
+        >
         <h1>Edit Post</h1>
         <ValidationObserver v-slot="{ handleSubmit, reset }">
           <form
@@ -86,6 +89,7 @@ export default {
       }
     }
   },
+
   mounted() {
     if (!this.$route.params.id) this.$router.push('/admin/posts')
     // eslint-disable-next-line
@@ -112,6 +116,11 @@ export default {
     onEditorReady(editor) {
       // eslint-disable-next-line
       console.log('editor ready!', editor)
+    }
+  },
+  head() {
+    return {
+      title: 'Edit Post'
     }
   }
 }

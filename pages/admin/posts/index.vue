@@ -117,6 +117,7 @@ export default {
       message: ''
     }
   },
+
   computed: {
     headers() {
       return [
@@ -157,6 +158,11 @@ export default {
       this.snackbar = true
       this.deleteBtnLoading = false
       this.deleteDialog = false
+    }
+  },
+  head() {
+    return {
+      title: 'Posts'
     }
   }
 }

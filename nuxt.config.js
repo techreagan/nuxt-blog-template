@@ -38,7 +38,8 @@ export default {
    */
   plugins: [
     { src: '@/plugins/vee-validate.js', mode: 'Client' },
-    { src: '@/plugins/vue-quil-editor.js', ssr: false }
+    { src: '@/plugins/vue-quil-editor.js', ssr: false },
+    { src: '@/plugins/html-decode.js', mode: 'Client' }
   ],
   /*
    ** Nuxt.js dev-modules

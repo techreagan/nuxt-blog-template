@@ -62,13 +62,17 @@ export default {
   },
   methods: {
     login() {
-      // eslint-disable-next-line
-      console.log('hello')
+      this.$router.push('/admin/dashboard')
 
       // this.$refs.form.setErrors({
       //       Email: ["We don't reconize, this email"],
       //       Password: ["We don't reconize, this password"]
       //     })
+    }
+  },
+  head() {
+    return {
+      title: 'Admin Login'
     }
   }
 }

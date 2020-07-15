@@ -1,30 +1,44 @@
 <template>
   <v-layout>
     <v-flex>
-      <v-btn class="mb-10" to="/" color="primary">back</v-btn>
-      <h1 class="mb-5">Welcome to tech reagan blog</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem nam
-        itaque qui facilis delectus magnam? Sapiente, excepturi fugit. Eligendi
-        blanditiis eaque pariatur ut deserunt mollitia dolores reiciendis
-        voluptatum fugit.
-      </p>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla atque
-        laboriosam laudantium deleniti commodi incidunt reprehenderit.
-        Accusantium vitae iusto impedit perspiciatis esse necessitatibus a animi
-        reiciendis nulla, facere enim. Aperiam!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
-        deleniti accusantium et eaque temporibus amet ut minus ipsam, reiciendis
-        nostrum facere voluptatum dicta possimus sapiente nihil ullam pariatur
-        magnam asperiores?
-      </p>
+      <v-btn class="mb-10" fab small to="/" color="primary"
+        ><v-icon>mdi-chevron-left</v-icon></v-btn
+      >
+      <h1 class="mb-5">{{ title }}</h1>
+      <client-only>
+        <div class="output ql-snow">
+          <!-- eslint-disable -->
+          <div class="ql-editor" v-html="body"></div>
+        </div>
+      </client-only>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-export default {}
+/* eslint-disable */
+export default {
+  data() {
+    return {
+      title: '',
+      body: ''
+    }
+  },
+  mounted() {
+    this.getPost()
+  },
+  methods: {
+    getPost() {
+      this.title = 'Welcome to tech reagan blog'
+      this.body = this.$htmlDecode(
+        `&lt;p>This is about learning JavaScript in three days.&lt;/p>&lt;pre class="ql-syntax" spellcheck="false">const &lt;span class="hljs-type">name&lt;/span> = "Hello world";&lt;span class="hljs-keyword">if&lt;/span>(&lt;span class="hljs-type">name&lt;/span> == "Tech") {alert(&lt;span class="hljs-string">'Tech'&lt;/span>);} &lt;span class="hljs-keyword">else&lt;/span> {alert("I don't know agaan");}&lt;/pre>`
+      )
+    }
+  },
+  head() {
+    return {
+      title: this.title
+    }
+  }
+}
 </script>
