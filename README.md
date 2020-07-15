@@ -1,6 +1,6 @@
-# blog
+# Nuxt Blog Template
 
-> Blog template built with vuetify and nuxtjs also includes dark and light mode
+> Blog template built with vuetify and nuxtjs with dark and light mode
 
 ## Screenshots
 
@@ -10,7 +10,7 @@
 
 ![Screenshot](screenshots/1%20-%20Home.jpg)
 
-### Post Page (/posts/1)
+### Post Page (/posts/:id)
 
 ![Screenshot](screenshots/2%20-%20Post.jpg)
 
@@ -30,7 +30,7 @@
 
 ![Screenshot](screenshots/6%20-%20Admin%20Create%20Post.jpg)
 
-### Admin Edit Post (/admin/edit-post)
+### Admin Edit Post (/admin/edit-post/:id)
 
 ![Screenshot](screenshots/7%20-%20Admin%20Edit%20Post.jpg)
 
