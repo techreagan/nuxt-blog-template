@@ -22,7 +22,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#1976D2' },
   /*
    ** Global CSS
    */
@@ -94,5 +94,8 @@ export default {
      */
     transpile: ['vee-validate/dist/rules'],
     extend(config, ctx) {}
+  },
+  generate: {
+    fallback: true
   }
 }

@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="mt-15">
-        <v-card v-for="n in 6" :key="n" class="mb-7" :to="`/posts/${n}`">
+        <v-card v-for="n in 6" :key="n" class="mb-7" :to="`/posts/${n}`" nuxt>
           <v-card-title class="headline">
             Welcome to tech reagan blog
           </v-card-title>
