@@ -1,5 +1,5 @@
 <template>
-  <v-app dark style="border: 8px solid #2B81D6">
+  <v-app dark>
     <v-app-bar fixed app>
       <v-container>
         <v-row class="justify-center">
