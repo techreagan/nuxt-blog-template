@@ -43,6 +43,11 @@ export default {
     return {
       page: 1
     }
+  },
+  head() {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>
